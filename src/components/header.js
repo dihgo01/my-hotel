@@ -1,11 +1,10 @@
 import React from 'react';
 import { MdWifi, MdRestaurant, MdWatch, MdPool, } from 'react-icons/md'
-import { Title, Content, Headers } from '../styles/header';
+import { Title, Content, Header} from '../styles/header';
 
 export default function header() {
     return (
-      
-        <Headers>
+        <Header>
             <div>
                 <Title>Pousada Na Tribu's</Title>
                 <Content>
@@ -15,18 +14,17 @@ export default function header() {
                     Os quartos dispõem de ar-condicionado, e o Wi-Fi...
                 </Content>
                 <h3>Comodidades do hotel</h3>
-                <MdWifi  color = '#536580'/> Wifi Gratuito 
-                <MdRestaurant  color = '#536580'/> Restaurante 
-                <MdWatch color = '#536580'/> Recepção 24h 
-                <MdPool color = '#536580'/> Piscina 
+                <MdWifi  color = '#536580'/>Wifi Gratuito 
+                <MdRestaurant  color = '#536580'/>Restaurante
+                <MdWatch color = '#536580'/> Recepção 24h
+                <MdPool color = '#536580'/>Piscina
 
             </div>
             <div>
 
             </div>
 
-        </Headers>
-    
+        </Header>
 
     );
 }

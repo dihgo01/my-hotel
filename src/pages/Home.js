@@ -1,11 +1,14 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import Header from '../components/header'
+//import { Header } from '../styles/home';
 
 export default function Home() {
   return (
-      <header>
-          Hello word
-      </header>
+    <>
+      <Header />
+        Hello word
+      
+    </>
   );
 }
