@@ -106,25 +106,6 @@ export const BtnMap = styled.a`
     font-size: 14px;
     line-height: 24px;
     position: absolute;
-    left: 986px;
-    top: 188px;
+    left: 964px;
+    top: 128px;
  `
-
-export const SpanIcons = styled.span`
-        display: inline-block;
-        padding-right: 65px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-`
-
-export const CheckOut = styled.div`
-    margin-top: 16px;
-   
-`
-
-
-
-export const Main = styled.div`
-    background: #F3F6FD;
-    max-width: 70%;
-`

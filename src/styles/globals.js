@@ -1,12 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle `
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
-
+ 
   html,
   body {
-    padding: 0;
-    margin: 0;
+    -webkit-font-smoothing: antialiased;
     font-family: Roboto, Arial, Helvetica, sans-serif ;
 }
 
@@ -17,7 +15,12 @@ export default createGlobalStyle `
 
   *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
+   button {
+     cursor: pointer;
+   }
 
 `;
 
