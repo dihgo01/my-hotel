@@ -3,7 +3,7 @@ import { FiUsers, FiChevronDown, FiChevronUp } from 'react-icons/fi'
 import { AiFillCheckCircle } from 'react-icons/ai'
 import api from '../../services/api'
 
-import { ListRooms, Ulstyle, TitleList, HeaderRoom, BtnMoreInfo } from './styles';
+import { ListRooms, Ulstyle, TitleList, HeaderRoom, BtnMoreInfo, ContentList } from './styles';
 
 export default function List() {
 
@@ -48,7 +48,7 @@ export default function List() {
          
 
     return (
-        <div>
+        <ContentList>
 
             <Ulstyle>
                 <TitleList>
@@ -106,7 +106,7 @@ export default function List() {
                 })}
             </Ulstyle>
 
-        </div>
+        </ContentList>
     )
 
 }

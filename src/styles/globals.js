@@ -22,9 +22,5 @@ export default createGlobalStyle `
      cursor: pointer;
    }
 
-   .eSmRcC{
-      padding-bottom : 120px;
-   }
-
 `;
 

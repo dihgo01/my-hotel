@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+
+export const ContentList = styled.div`
+    padding-bottom : 120px;
+`
+
 export const Ulstyle = styled.ul `
     padding: 0;
     max-width: 951px;
