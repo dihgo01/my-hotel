@@ -2,24 +2,31 @@ import React, { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { ptBR } from 'date-fns/locale';
+import { formatWithOptions } from 'date-fns/fp'
+import { FiCalendar } from 'react-icons/fi'
 
 
 import List from '../List/list'
-import { Main, FormDate, SearchDate } from './styles';
+import { Mains, FormDate, SearchDate } from './styles';
 
-export default function main() {
+
+export default function Main() {
 
     const [startDate, setStartDate] = useState(new Date());
-    const [endDate, setEndDate] = useState(new Date());
+    const [endDate, setEndDate] = useState();
+
+    const date = new Date()
+    const DateNow = formatWithOptions({ locale: ptBR }," EE, d MMM", new Date().setDate(date.getDate() + 3));
+    
 
     return (
-        <Main>
+        <Mains>
             <SearchDate>
                 <h2>Reserve a sua acomodação</h2>
                 <FormDate>
                 <DatePicker
                     filterDate={d => {
-                        return new Date() <= -d;
+                        return new Date() <= d;
                       }}
                     dateFormat=" EE, d MMM"
                     locale= {ptBR}
@@ -34,6 +41,7 @@ export default function main() {
                         return new Date() <= d;
                       }}
                     dateFormat="EE, d MMM"
+                    placeholderText={DateNow}
                     locale= {ptBR}
                     selected={endDate}
                     selectsEnd
@@ -41,15 +49,15 @@ export default function main() {
                     endDate={endDate}
                     minDate={startDate}
                     onChange={date => setEndDate(date)}
-                />
-                </FormDate>
+                /><div className="icone-calender"><FiCalendar color={'#406591'} size={24} /></div>
+                </FormDate> 
                 <hr />
             </SearchDate>
             {
                 endDate ? <List /> : null
             }
             
-        </Main>
+        </Mains>
     );
 }
 

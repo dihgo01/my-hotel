@@ -5,6 +5,13 @@ export const Ulstyle = styled.ul `
     max-width: 951px;
     margin: 0 auto;
 
+    @media (max-width: 875px) {
+        max-width: 90%;
+     }
+    @media (max-width: 590px) { 
+
+    }
+
 `
 export const TitleList = styled.div `
     display: grid;
@@ -24,6 +31,23 @@ export const TitleList = styled.div `
         line-height: 24px;
         color: #29415E; 
     }
+
+    @media (max-width: 875px) {
+
+        margin-left: 50px;
+        grid-column-gap: 5px;
+        grid-template-columns: 1fr 35%;
+        div > h3 { 
+            font-size: 14px;
+            line-height: 18px;
+        }
+     }
+    @media (max-width: 590px) { 
+        div > h3 { 
+            font-size: 8px;
+            line-height: 14px;
+        }
+    }
     
 `
 
@@ -38,7 +62,9 @@ export const ListRooms = styled.li`
    
     color: #29415E;
     max-width: 951px;
-    margin: 16px auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
     background: #FFFFFF;
     border: 1px solid #CFD9E7;
     box-sizing: border-box;
@@ -71,8 +97,12 @@ export const ListRooms = styled.li`
     }
 
     .amenities {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #536580;
     }
 
     div > h3 {
@@ -81,6 +111,39 @@ export const ListRooms = styled.li`
         font-weight: normal;
         font-size: 18px;
         line-height: 21px;
+    }
+
+    @media (max-width: 875px) {
+
+        .description{
+        h3 {
+            font-size: 14px;
+            line-height: 18px;
+            
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        div > h3 { 
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .amenities {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+    }
+    
+    @media (max-width: 590px) { 
+        div > h3 { 
+            font-size: 8px;
+            line-height: 12px;
+        }
     }
 
    
@@ -136,6 +199,37 @@ export const HeaderRoom = styled.div `
         margin-right: 20px;
     }   
 
+    @media (max-width: 875px) { 
+
+        grid-template-columns: 1fr 25%;
+        grid-column-gap: 5px;
+        .titleRoom {
+
+        }
+        div > h3 > strong {
+            display: none;
+        }
+        .image-box img {
+            max-width: 100%;  
+        }
+
+        div > a {
+            padding: 1px 3px;
+            font-size: 8px;
+            padding: 5px 8px;
+            line-height:1.5;
+            border-radius: 15px;
+        }
+        div > h3 { 
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+    @media (max-width: 575px) { 
+        .image-box img {
+            max-width: 60px;  
+        }
+    }
 `
 export const BtnMoreInfo = styled.div `
         font-family: Roboto;
@@ -146,4 +240,11 @@ export const BtnMoreInfo = styled.div `
         color: #536580;
         padding: 10px;
         background: #FFFFFF;
+
+        @media (max-width: 875px) {
+            padding: 1px 5px;
+            font-size: 12px;
+            line-height: 1.5;
+            border-radius: 3px;
+        }
 `

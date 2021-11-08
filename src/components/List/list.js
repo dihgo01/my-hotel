@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FiUsers, FiChevronDown, FiChevronUp } from 'react-icons/fi'
+import { AiFillCheckCircle } from 'react-icons/ai'
 import api from '../../services/api'
 
 import { ListRooms, Ulstyle, TitleList, HeaderRoom, BtnMoreInfo } from './styles';
@@ -20,6 +21,31 @@ export default function List() {
             [id]: !prevShownComments[id]
         }));
     }
+
+    function HandlerString (data) {
+        const str = data.toString()
+        const res = str.split(/\s*,\s*/)
+
+        const result = res.map( d => {
+            return (
+                `<li>${d}</li>`
+            )
+        }) 
+
+        let parser = new DOMParser();
+        let doc = parser.parseFromString(result , "text/html")
+        const list = doc.getElementsByTagName('li');
+        const arrayList = [...list]
+
+        const mapList = arrayList.map( d => {
+            return d.innerHTML
+        })
+
+        console.log(mapList)
+        return mapList
+         
+    }
+         
 
     return (
         <div>
@@ -61,7 +87,7 @@ export default function List() {
                                             <p>{rooms.accommodation}</p>
                                             <h3>Comodidades</h3>
                                             <div className ="amenities">
-                                                <li>{rooms.amenities}</li>
+                                               <AiFillCheckCircle color='#3BDBC9' size={13}/> {HandlerString(rooms.amenities) }
                                             </div>
                                         </div> : null
                                 }

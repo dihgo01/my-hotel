@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const Main = styled.div`
+export const Mains = styled.div`
     background: #F3F6FD;
     padding-top: 40px;
+
 `
 export const SearchDate = styled.div ` 
     
@@ -20,6 +21,24 @@ export const SearchDate = styled.div `
         
         margin-bottom: 8px;  
     }
+    @media (max-width: 875px) {
+
+        max-width: 90%;
+
+        h2 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    @media (max-width: 570px) { 
+
+        h2 {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
 `
 export const FormDate = styled.div`
    
@@ -35,12 +54,38 @@ export const FormDate = styled.div`
         background: #FFFFFF;
         border: 1px solid #CFD9E7;
         box-sizing: border-box;
-        border-radius: 4px;
+        border-radius: 4px 0px 0px 4px;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 19px;
         color: #536580;
+    }
+
+    .icone-calender{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background: #FFFFFF;
+        border: 1px solid #CFD9E7;
+        border-radius: 0px 4px 4px 0px;
+    }
+
+    @media (max-width: 875px) {
+
+        input {
+            font-size: 10px;
+            line-height: 14px;
+        }
+
+        .icone-calender{ 
+            display: none;
+         }
+
+        @media (max-width: 590px) { 
+
+        }
+    
     }
 `

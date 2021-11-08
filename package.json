@@ -1,15 +1,16 @@
 {
-  "name": "im-dev",
+  "name": "my-hotel",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "yarn install && next build && next start",
     "lint": "next lint"
   },
   "dependencies": {
     "axios": "^0.24.0",
     "date-fns": "^2.25.0",
+    "dotenv": "^10.0.0",
     "moment": "^2.29.1",
     "next": "12.0.2",
     "next-images": "^1.8.2",

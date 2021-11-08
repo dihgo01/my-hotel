@@ -1,7 +1,8 @@
 import axios from 'axios'
+//require('dotenv').config()
 
 const api = axios.create({
-    baseURL: 'https://hml-booking-engine.herokuapp.com/admin/rooms?begin_date=2021-10-01&end_date=2021-12-31'
+    baseURL: process.env.URL_BACKEND,
 });
 
 export default api
