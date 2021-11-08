@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Mains = styled.div`
     background: #F3F6FD;
     padding-top: 40px;
+    padding-bottom : 120px;
 
 `
 export const SearchDate = styled.div ` 
