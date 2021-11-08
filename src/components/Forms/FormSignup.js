@@ -80,7 +80,7 @@ const FormSignup = ({ submitForm }) => {
             </div>
           </div>
 
-          <div className='form-inputs'>
+          <div className='form-inputs parc-form'>
             <label className='form-label'>Número de parcelas</label>
             <input
               className='form-input'

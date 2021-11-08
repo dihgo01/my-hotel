@@ -2,14 +2,14 @@ export default function validateInfo(values) {
   let errors = {};
 
   if (!values.username.trim()) {
-    errors.username = 'Por favor preencha com seu nome';
+    errors.username = 'Coloque seu nome';
   }
   // else if (!/^[A-Za-z]+/.test(values.name.trim())) {
   //   errors.name = 'Enter a valid name';
   // }
 
   if (!values.email) {
-    errors.email = 'Por Favor insira um E-mail valido';
+    errors.email = ' E-mail invalido';
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
     errors.email = 'Email address is invalid';
   }

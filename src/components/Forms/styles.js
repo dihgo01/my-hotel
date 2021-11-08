@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FaCreditCard } from 'react-icons/fa'
 
 export const Forms = styled.div`
     max-width: 951px;
@@ -7,6 +6,7 @@ export const Forms = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 121px;
+    padding-bottom: 15px;
 
     @media (max-width: 875px) {
       grid-template-columns: 255px 1fr;
@@ -22,8 +22,7 @@ export const Forms = styled.div`
     
 `
 export const FormDate = styled.div`
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
-
+ 
       max-width: 468px;
 
 
@@ -46,6 +45,10 @@ export const FormDate = styled.div`
         }
       }
 
+      .parc {
+          margin-bottom: 15px;
+      }
+
       .icon-card {
         position:absolute;
         top: 20;
@@ -61,6 +64,7 @@ export const FormDate = styled.div`
       .form-label{
           display: flex;
           flex-direction: column;
+          position: relative;
           width: 100%;
           margin-bottom: 0px;
           margin-left: 16px;
@@ -70,7 +74,7 @@ export const FormDate = styled.div`
     .form-inputs{
       display: flex;
       flex-direction: column;
-      font-family: FontAwesome, Roboto;
+    
 
       h1 {
         margin-top : 48px;
@@ -95,6 +99,7 @@ export const FormDate = styled.div`
       color: #29415E;
       margin-top: 16px;
       display: flex;
+      
     }
 
     .error-validation {
@@ -104,8 +109,9 @@ export const FormDate = styled.div`
         font-size: 12px;
         line-height: 24px;
         color: #D64753;
-        margin-left: 16px;
         margin-bottom: 0;
+        position: absolute;
+        right: 20px;
 
     }
 
@@ -228,6 +234,8 @@ export const FormDate = styled.div`
           font-size: 6px;
           line-height: 14px;
           margin-bottom: 0;
+          position: absolute;
+          right: 0;
         }
     }
 
@@ -346,7 +354,8 @@ export const DataInfo = styled.div`
     .div-btn-input{
       display: flex;
       justify-content: end;
-      margin-top: 114px;
+      margin-top: 102px;
+     
     }
 
     @media (max-width: 875px) { 
